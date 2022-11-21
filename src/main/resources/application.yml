@@ -1,0 +1,9 @@
+server:
+  port: 8282
+
+#ViewResolver 설정
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
