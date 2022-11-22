@@ -12,14 +12,33 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    all {
+        //logback 충돌방지
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    //JSP
+    //JSP & JSTL
     implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
     implementation 'javax.servlet:jstl'
+
+    //log4j2
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+    annotationProcessor 'org.springframework.boot:spring-boot-starter-log4j2'
+
+    //lombok
+    implementation 'org.projectlombok:lombok'
+
 }
 
 tasks.named('test') {
