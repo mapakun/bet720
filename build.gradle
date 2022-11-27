@@ -39,6 +39,9 @@ dependencies {
     //lombok
     implementation 'org.projectlombok:lombok'
 
+    //mySQL
+    runtimeOnly 'mysql:mysql-connector-java'
+
 }
 
 tasks.named('test') {

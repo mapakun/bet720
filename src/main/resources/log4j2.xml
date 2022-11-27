@@ -29,7 +29,7 @@
 
     <Loggers>
         <!-- Application Loggers -->
-        <!-- Root 보다 우선 순위가 높습니다. -->
+        <!-- Root 보다 우선 순위가 높음. -->
         <logger name="com.toto.bet730.controller" level="INFO" additivity="false">
             <AppenderRef ref="console" />
             <AppenderRef ref="RollingFile" />
@@ -41,7 +41,7 @@
 <!--        </logger>-->
 
         <!-- FATAL, ERROR, WARN, INFO, DEBUG, TRACE -->
-        <Root level="INFO">
+        <Root level="WARN">
             <AppenderRef ref="console" />
             <AppenderRef ref="RollingFile" />
         </Root>

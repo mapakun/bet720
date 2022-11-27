@@ -1,9 +1,18 @@
 server:
   port: 8282
 
-#ViewResolver 설정
+
 spring:
+  #ViewResolver
   mvc:
     view:
       prefix: /WEB-INF/view/
       suffix: .jsp
+
+  #MySQL JDBC
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/toto720??useUnicode=true&serverTimezone=Asia/Seoul
+    username: toto720
+    password: bet720
+
