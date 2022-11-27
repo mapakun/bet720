@@ -39,9 +39,11 @@ dependencies {
     //lombok
     implementation 'org.projectlombok:lombok'
 
-    //mySQL
+    //mySQL JDBC
     runtimeOnly 'mysql:mysql-connector-java'
 
+    //MyBatis
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
 }
 
 tasks.named('test') {

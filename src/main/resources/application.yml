@@ -12,7 +12,12 @@ spring:
   #MySQL JDBC
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/toto720??useUnicode=true&serverTimezone=Asia/Seoul
-    username: toto720
+    url: jdbc:mysql://localhost:3306/toto720?allowPublicKeyRetrieval=true&useUnicode=true&serverTimezone=Asia/Seoul
+    username: toto720_admin
     password: bet720
 
+#MyBatis
+mybatis:
+  mapper-locations: /mapper/**/*.xml
+  #MyBatis Alias Setting NotUse.
+#  type-aliases-package: com/toto/bet730/model
